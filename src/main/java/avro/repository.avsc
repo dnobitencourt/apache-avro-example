@@ -1,0 +1,21 @@
+{
+"namespace": "org.avro.example.generated",
+ "type": "record",
+ "name": "Repository",
+ "fields": [
+     {"name": "id", "type": "long", "doc": "Repository ID"},
+     {"name": "name", "type": "string", "doc": "Repository Nanme"},
+     {"name": "url", "type": "string", "doc": "Repository URL"},
+     {"name": "description", "type": ["string", "null"], "default": null},
+     {"name": "private", "type": "boolean"},     
+     {"name": "forks_count",  "type": ["int", "null"], "default": 0},
+     {"name": "topics", "type": { "type": "array", "items": "string"} },
+     {"name": "owner", "type": { "type": "record", "name": "User", 
+        "fields" : [
+            {"name": "id", "type": "long"},
+            {"name": "login", "type": "string"}
+        ]}
+    }     
+ ]
+}
+
