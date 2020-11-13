@@ -6,9 +6,9 @@
      {"name": "id", "type": "long", "doc": "User ID"},
      {"name": "login", "type": "string", "doc": "User login"},
      {"name": "url", "type": "string"},
-     {"name": "site", "type": ["string", "null"], "default": null},
+     {"name": "site", "type": ["null", "string"], "default": null},
      {"name": "two_factor_authentication", "type": "boolean"},     
-     {"name": "public_repos",  "type": ["int", "null"]}
+     {"name": "public_repos", "type": "int","default": 0}
  ]
 }
 

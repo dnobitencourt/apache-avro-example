@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class User extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 5475967839057014852L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"org.avro.example.generated\",\"fields\":[{\"name\":\"id\",\"type\":\"long\",\"doc\":\"User ID\"},{\"name\":\"login\",\"type\":\"string\",\"doc\":\"User login\"},{\"name\":\"url\",\"type\":\"string\"},{\"name\":\"site\",\"type\":[\"string\",\"null\"],\"default\":null},{\"name\":\"two_factor_authentication\",\"type\":\"boolean\"},{\"name\":\"public_repos\",\"type\":[\"int\",\"null\"]}]}");
+  private static final long serialVersionUID = -237844598962488365L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"org.avro.example.generated\",\"fields\":[{\"name\":\"id\",\"type\":\"long\",\"doc\":\"User ID\"},{\"name\":\"login\",\"type\":\"string\",\"doc\":\"User login\"},{\"name\":\"url\",\"type\":\"string\"},{\"name\":\"site\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"two_factor_authentication\",\"type\":\"boolean\"},{\"name\":\"public_repos\",\"type\":\"int\",\"default\":0}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -58,7 +58,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   @Deprecated public java.lang.CharSequence url;
   @Deprecated public java.lang.CharSequence site;
   @Deprecated public boolean two_factor_authentication;
-  @Deprecated public java.lang.Integer public_repos;
+  @Deprecated public int public_repos;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -250,7 +250,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     private java.lang.CharSequence url;
     private java.lang.CharSequence site;
     private boolean two_factor_authentication;
-    private java.lang.Integer public_repos;
+    private int public_repos;
 
     /** Creates a new Builder */
     private Builder() {
@@ -535,7 +535,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'public_repos'.
       * @return This builder.
       */
-    public org.avro.example.generated.User.Builder setPublicRepos(java.lang.Integer value) {
+    public org.avro.example.generated.User.Builder setPublicRepos(int value) {
       validate(fields()[5], value);
       this.public_repos = value;
       fieldSetFlags()[5] = true;
@@ -556,7 +556,6 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @return This builder.
       */
     public org.avro.example.generated.User.Builder clearPublicRepos() {
-      public_repos = null;
       fieldSetFlags()[5] = false;
       return this;
     }

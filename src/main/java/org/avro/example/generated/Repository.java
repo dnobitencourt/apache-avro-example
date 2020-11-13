@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class Repository extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 7819400788962043189L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Repository\",\"namespace\":\"org.avro.example.generated\",\"fields\":[{\"name\":\"id\",\"type\":\"long\",\"doc\":\"Repository ID\"},{\"name\":\"name\",\"type\":\"string\",\"doc\":\"Repository Nanme\"},{\"name\":\"url\",\"type\":\"string\",\"doc\":\"Repository URL\"},{\"name\":\"description\",\"type\":[\"string\",\"null\"],\"default\":null},{\"name\":\"private\",\"type\":\"boolean\"},{\"name\":\"forks_count\",\"type\":[\"int\",\"null\"],\"default\":0},{\"name\":\"topics\",\"type\":{\"type\":\"array\",\"items\":\"string\"}},{\"name\":\"owner\",\"type\":{\"type\":\"record\",\"name\":\"User\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"login\",\"type\":\"string\"}]}}]}");
+  private static final long serialVersionUID = 1953830594868341587L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Repository\",\"namespace\":\"org.avro.example.generated\",\"fields\":[{\"name\":\"id\",\"type\":\"long\",\"doc\":\"Repository ID\"},{\"name\":\"name\",\"type\":\"string\",\"doc\":\"Repository Nanme\"},{\"name\":\"url\",\"type\":\"string\",\"doc\":\"Repository URL\"},{\"name\":\"description\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"private\",\"type\":\"boolean\"},{\"name\":\"forks_count\",\"type\":\"int\",\"default\":0},{\"name\":\"topics\",\"type\":{\"type\":\"array\",\"items\":\"string\"}},{\"name\":\"owner\",\"type\":{\"type\":\"record\",\"name\":\"User\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"login\",\"type\":\"string\"}]}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -59,7 +59,7 @@ public class Repository extends org.apache.avro.specific.SpecificRecordBase impl
   @Deprecated public java.lang.CharSequence url;
   @Deprecated public java.lang.CharSequence description;
   @Deprecated public boolean private$;
-  @Deprecated public java.lang.Integer forks_count;
+  @Deprecated public int forks_count;
   @Deprecated public java.util.List<java.lang.CharSequence> topics;
   @Deprecated public org.avro.example.generated.User owner;
 
@@ -295,7 +295,7 @@ public class Repository extends org.apache.avro.specific.SpecificRecordBase impl
     private java.lang.CharSequence url;
     private java.lang.CharSequence description;
     private boolean private$;
-    private java.lang.Integer forks_count;
+    private int forks_count;
     private java.util.List<java.lang.CharSequence> topics;
     private org.avro.example.generated.User owner;
     private org.avro.example.generated.User.Builder ownerBuilder;
@@ -607,7 +607,7 @@ public class Repository extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'forks_count'.
       * @return This builder.
       */
-    public org.avro.example.generated.Repository.Builder setForksCount(java.lang.Integer value) {
+    public org.avro.example.generated.Repository.Builder setForksCount(int value) {
       validate(fields()[5], value);
       this.forks_count = value;
       fieldSetFlags()[5] = true;
@@ -628,7 +628,6 @@ public class Repository extends org.apache.avro.specific.SpecificRecordBase impl
       * @return This builder.
       */
     public org.avro.example.generated.Repository.Builder clearForksCount() {
-      forks_count = null;
       fieldSetFlags()[5] = false;
       return this;
     }
